@@ -1,0 +1,57 @@
+{
+  "name": "@pqblocks/browser-pqc-verifier",
+  "version": "0.1.0",
+  "description": "Post-quantum certificate and chain verifier for browsers and Node.js using ML-DSA/SLH-DSA from @noble/post-quantum.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "src/index.js",
+  "types": "types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./src/index.js"
+    }
+  },
+  "bin": {
+    "pqblocks-browser-verify": "./bin/pqblocks-browser-verify.js"
+  },
+  "scripts": {
+    "test": "node --test 'tests/**/*.test.js'",
+    "gen:types": "tsc --declaration --emitDeclarationOnly --outDir types index.ts"
+  },
+  "dependencies": {
+    "@noble/post-quantum": "^0.7.1"
+  },
+  "author": "The PQBlocks Authors",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PQBlocks/browser-pqc-verifier.git"
+  },
+  "homepage": "https://github.com/PQBlocks/browser-pqc-verifier#readme",
+  "bugs": {
+    "url": "https://github.com/PQBlocks/browser-pqc-verifier/issues"
+  },
+  "keywords": [
+    "post-quantum",
+    "pqc",
+    "ml-dsa",
+    "slh-dsa",
+    "certificate",
+    "chain",
+    "verification"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE",
+    "NOTICE",
+    "bin",
+    "types"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}

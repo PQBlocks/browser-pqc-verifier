@@ -1,0 +1,10 @@
+{
+  "schema": "cbom-1.0",
+  "algorithms": [
+    "UNKNOWN"
+  ],
+  "keySizes": [
+    270
+  ],
+  "certCount": 25
+}

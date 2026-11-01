@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "pqblocks-browser-pqc-verifier"
+version: "0.1.0"
+license: Apache-2.0
+repository-code: "https://github.com/PQBlocks/browser-pqc-verifier"
+authors:
+  - name: "The PQBlocks Authors"
+keywords:
+  - post-quantum
+  - pqc
+  - ml-dsa
+  - slh-dsa
+  - certificate
+  - chain
+  - verification
+abstract: "Post-quantum certificate and chain verifier for browsers and Node.js using ML-DSA/SLH-DSA from @noble/post-quantum."
