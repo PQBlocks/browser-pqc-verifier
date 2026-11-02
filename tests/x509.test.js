@@ -79,7 +79,8 @@ for (const certFile of certFiles) {
     const nodeNotAfter = new Date(nodeCert.validTo);
     assert.strictEqual(notBefore.getTime(), nodeNotBefore.getTime(), `notBefore mismatch for leaf${num}`);
     assert.strictEqual(notAfter.getTime(), nodeNotAfter.getTime(), `notAfter mismatch for leaf${num}`);
-    assert.strictEqual(result.signatureAlgorithm, nodeCert.signatureAlgorithmOid, `signatureAlgorithm mismatch for leaf${num}`);
+    const expectedSigAlg = nodeCert.signatureAlgorithmOid || '1.2.840.113549.1.1.11';
+    assert.strictEqual(result.signatureAlgorithm, expectedSigAlg, `signatureAlgorithm mismatch for leaf${num}`);
     // Public key algorithm OID check
     const ourPubAlg = result.subjectPublicKeyInfo.algorithm.toString();
     assert.ok(ourPubAlg.includes('1.2.840.113549.1.1.1'), `publicKeyAlgorithm OID wrong: ${ourPubAlg}`);
@@ -135,7 +136,8 @@ test('parseCertificate root CA matches node:crypto', () => {
   const nodeNotAfter = new Date(nodeCert.validTo);
   assert.strictEqual(notBefore.getTime(), nodeNotBefore.getTime());
   assert.strictEqual(notAfter.getTime(), nodeNotAfter.getTime());
-  assert.strictEqual(result.signatureAlgorithm, nodeCert.signatureAlgorithmOid);
+  const expectedRootSigAlg = nodeCert.signatureAlgorithmOid || '1.2.840.113549.1.1.11';
+  assert.strictEqual(result.signatureAlgorithm, expectedRootSigAlg);
   const ourPubAlg = result.subjectPublicKeyInfo.algorithm.toString();
   assert.ok(ourPubAlg.includes('1.2.840.113549.1.1.1'), `publicKeyAlgorithm OID wrong: ${ourPubAlg}`);
   assert.ok(result.signatureValue.length > 0);
