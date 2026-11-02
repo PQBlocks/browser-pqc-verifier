@@ -23,3 +23,5 @@ jobs:
       - run: npm ci || npm install --no-audit --no-fund
       - run: node --test
       - run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
