@@ -12,7 +12,7 @@
     }
   },
   "bin": {
-    "pqblocks-browser-verify": "./bin/pqblocks-browser-verify.js"
+    "pqblocks-browser-verify": "bin/pqblocks-browser-verify.js"
   },
   "scripts": {
     "test": "node --test 'tests/**/*.test.js'",
