@@ -21,7 +21,11 @@
   "dependencies": {
     "@noble/post-quantum": "^0.7.1"
   },
-  "author": "The PQBlocks Authors",
+  "author": "Govind Dubey <govinddubeycse@gmail.com> (PQBlocks)",
+  "contributors": [
+    "Govind Dubey <govinddubeycse@gmail.com>",
+    "The PQBlocks Authors"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/PQBlocks/browser-pqc-verifier.git"
