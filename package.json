@@ -21,9 +21,9 @@
   "dependencies": {
     "@noble/post-quantum": "^0.7.1"
   },
-  "author": "Govind Dubey <govinddubeycse@gmail.com> (PQBlocks)",
+  "author": "Govind Dubey <govinddubeycse+pqblocks@gmail.com> (PQBlocks)",
   "contributors": [
-    "Govind Dubey <govinddubeycse@gmail.com>",
+    "Govind Dubey <govinddubeycse+pqblocks@gmail.com>",
     "The PQBlocks Authors"
   ],
   "repository": {
